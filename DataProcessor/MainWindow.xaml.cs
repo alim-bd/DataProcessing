@@ -42,6 +42,7 @@ namespace DataProcessor
         private int nTotalDeal = 0;
         private int nTradedCount = 0;
         private const string FileTag = "_rod.geojson";
+        private const string FileTag_2 = "_shz.geojson";
         public MainWindow()
         {
             InitializeComponent();
@@ -104,6 +105,7 @@ namespace DataProcessor
                 nTradedCount ++;
 
                 ConvertFile(path + "\\" + subPath + "\\" + subPath + FileTag, subDirectoryPath + "\\" + subPath + FileTag);
+                File.Copy(path + "\\" + subPath + "\\" + subPath + FileTag_2, subDirectoryPath + "\\" + subPath + FileTag_2, true);
             }
         }
 
